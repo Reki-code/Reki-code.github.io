@@ -1,0 +1,7 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:Reki-code/Reki-code.github.io.git
+	branch = master
+[submodule "themes/fuji"]
+	path = themes/fuji
+	url = git@github.com:Reki-code/hugo-theme-fuji.git
