@@ -3,15 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://reki-code.github.io/categories/</loc>
+    <loc>https://reki-code.github.io/tags/fonts/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reki-code.github.io/tags/libreoffice/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reki-code.github.io/tags/linux/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reki-code.github.io/posts/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://reki-code.github.io/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://reki-code.github.io/tags/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/</loc>
+    <lastmod>2020-09-29T23:08:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reki-code.github.io/categories/</loc>
   </url>
   
 </urlset>

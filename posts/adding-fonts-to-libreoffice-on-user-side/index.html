@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
+
+
+<title>为 LibreOffice 添加字体 - rekii&#39;s blog</title>
+
+
+
+
+<meta name="keywords" content="LibreOffice, Linux, fonts" />
+
+<meta property="og:title" content="为 LibreOffice 添加字体" />
+<meta property="og:description" content="跳过废话
+Linux 安装字体 通常安装字体可以通过自带的包管理系统安装，也可以手动安装。
+手动安装字体 在系统范围内（对所有用户有效）安装字体，可以将字体文件移动到 /usr/share/fonts/目录。这些文件需要对每个用户而言都是可读的，使用chmod设置合理的权限（文件至少为0444, 目录至少为0555）。
+为单个用户安装字体，使用$XDG_CONFIG_HOME/fontconfig/fonts.conf 如果 XDG_CONFIG_HOME没有设置则使用$HOME/.config/fontconfig/fonts.conf目录（$HOME/.fonts有可能工作，不过已经过时了1）
+最后使用fc-list : file | grep &quot;字体文件名&quot;验证安装。
+缺陷 安装中易宋体之后，某些网址直接调用该字体导致字体显示效果不理想。最终选择移除系统中的中易宋体文件。 但是实验报告又要求使用中易宋体。
+解决方案 LibreOffice 支持单应用添加字体。
+ 在用户配置目录2$HOME/.config/libreoffice/4/user（LibreOffice 4 之后的版本）下新建fonts文件夹。 将需要的字体文件复制到fonts目录里。 打开 LibreOffice 就可以看到相应的字体。     fonts.conf is deprecated? &#x21a9;&#xfe0e;
+ LibreOffice 默认用户配置目录 &#x21a9;&#xfe0e;
+   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/" />
+<meta property="article:published_time" content="2020-09-29T23:08:51+08:00" />
+<meta property="article:modified_time" content="2020-09-29T23:08:51+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="为 LibreOffice 添加字体"/>
+<meta name="twitter:description" content="跳过废话
+Linux 安装字体 通常安装字体可以通过自带的包管理系统安装，也可以手动安装。
+手动安装字体 在系统范围内（对所有用户有效）安装字体，可以将字体文件移动到 /usr/share/fonts/目录。这些文件需要对每个用户而言都是可读的，使用chmod设置合理的权限（文件至少为0444, 目录至少为0555）。
+为单个用户安装字体，使用$XDG_CONFIG_HOME/fontconfig/fonts.conf 如果 XDG_CONFIG_HOME没有设置则使用$HOME/.config/fontconfig/fonts.conf目录（$HOME/.fonts有可能工作，不过已经过时了1）
+最后使用fc-list : file | grep &quot;字体文件名&quot;验证安装。
+缺陷 安装中易宋体之后，某些网址直接调用该字体导致字体显示效果不理想。最终选择移除系统中的中易宋体文件。 但是实验报告又要求使用中易宋体。
+解决方案 LibreOffice 支持单应用添加字体。
+ 在用户配置目录2$HOME/.config/libreoffice/4/user（LibreOffice 4 之后的版本）下新建fonts文件夹。 将需要的字体文件复制到fonts目录里。 打开 LibreOffice 就可以看到相应的字体。     fonts.conf is deprecated? &#x21a9;&#xfe0e;
+ LibreOffice 默认用户配置目录 &#x21a9;&#xfe0e;
+   "/>
+
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://reki-code.github.io/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://reki-code.github.io/">rekii&#39;s blog</a>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/">为 LibreOffice 添加字体</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/libreoffice">LibreOffice</a>&nbsp;<a href="/tags/linux">Linux</a>&nbsp;<a href="/tags/fonts">fonts</a>&nbsp;</span>
+
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <p><a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">跳过废话</a></p>
+<h1 id="linux-安装字体">Linux 安装字体</h1>
+<p>通常安装字体可以通过自带的包管理系统安装，也可以手动安装。</p>
+<h2 id="手动安装字体">手动安装字体</h2>
+<p>在系统范围内（对所有用户有效）安装字体，可以将字体文件移动到 <code>/usr/share/fonts/</code>目录。这些文件需要对每个用户而言都是可读的，使用<code>chmod</code>设置合理的权限（文件至少为<code>0444</code>, 目录至少为<code>0555</code>）。</p>
+<p>为单个用户安装字体，使用<code>$XDG_CONFIG_HOME/fontconfig/fonts.conf</code>
+如果<code> XDG_CONFIG_HOME</code>没有设置则使用<code>$HOME/.config/fontconfig/fonts.conf</code>目录（<code>$HOME/.fonts</code>有可能工作，不过已经过时了<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>）</p>
+<p>最后使用<code>fc-list : file | grep &quot;字体文件名&quot;</code>验证安装。</p>
+<h1 id="缺陷">缺陷</h1>
+<p>安装中易宋体之后，某些网址直接调用该字体导致字体显示效果不理想。最终选择移除系统中的中易宋体文件。
+但是实验报告又要求使用中易宋体。</p>
+<h1 id="解决方案">解决方案</h1>
+<p>LibreOffice 支持单应用添加字体。</p>
+<ol>
+<li>在用户配置目录<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><code>$HOME/.config/libreoffice/4/user</code>（LibreOffice 4 之后的版本）下新建<code>fonts</code>文件夹。</li>
+<li>将需要的字体文件复制到<code>fonts</code>目录里。</li>
+<li>打开 LibreOffice 就可以看到相应的字体。
+<img class="img-zoomable" src="/posts/img/LibreOfficeSimSun.png" alt="LibreOffice with SimSum" />
+</li>
+</ol>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.linuxquestions.org/questions/slackware-14/fonts-conf-is-deprecated-4175488781/" target="_blank">fonts.conf is deprecated?</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://wiki.documentfoundation.org/UserProfile/zh-hans#.E9.BB.98.E8.AE.A4.E4.BD.8D.E7.BD.AE" target="_blank">LibreOffice 默认用户配置目录</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/fonts/">fonts</a>
+            </span>
+            
+            <span>
+                <a href="/tags/libreoffice/">LibreOffice</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">Linux</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2020 <a href="https://reki-code.github.io/"></a> |
+                Powered by <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> </span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.6,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

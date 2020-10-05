@@ -15,19 +15,19 @@
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
 
 
-<title>404 Page not found - rekii&#39;s blog</title>
+<title>fonts - rekii&#39;s blog</title>
 
 
 
 
-<meta property="og:title" content="404 Page not found" />
+<meta property="og:title" content="fonts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://reki-code.github.io/404.html" />
-
+<meta property="og:url" content="https://reki-code.github.io/tags/fonts/" />
+<meta property="og:updated_time" content="2020-09-29T23:08:51+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
+<meta name="twitter:title" content="fonts"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -83,9 +83,43 @@
             
             <div class="col-12 col-md-9 float-left content">
                 
-<div class="404-not-found" style="font-size: 2rem; padding-top: 1.5rem;">
-    <span>404 NOT FOUND</span>
+
+<div class="page-info">
+    <span>Posts with the tag fonts: </span>
 </div>
+
+
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/">为 LibreOffice 添加字体</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/libreoffice">LibreOffice</a>&nbsp;<a href="/tags/linux">Linux</a>&nbsp;<a href="/tags/fonts">fonts</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        跳过废话
+Linux 安装字体 通常安装字体可以通过自带的包管理系统安装，也可以手动安装。
+手动安装字体 在系统范围内（对所有用户有效）安装字体，可以将字体文件移动到 /usr/share/fonts/目录。这些文件需要对每个用户而言都是可读的，使用chmod设置合理的权限（文件至少为0444, 目录至少为0555）。
+为单个用户安装字体，使用$XDG_CONFIG_HOME/fontconfig/fonts.conf 如果 XDG_CONFIG_HOME没有设置则使用$HOME/.config/fontconfig/fonts.conf目录（$HOME/.fonts有可能工作，不过已经过时了1）
+最后使用fc-list : file | grep &quot;字体文件名&quot;验证安装。
+缺陷 安装中易宋体之后，某些网址直接调用该字体导致字体显示效果不理想。最终选择移除系统中的中易宋体文件。 但是实验报告又要求使用中易宋体。
+解决方案 LibreOffice 支持单应用添加字体。
+ 在用户配置目录2$HOME/.config/libreoffice/4/user（LibreOffice 4 之后的版本）下新建fonts文件夹。 将需要的字体文件复制到fonts目录里。 打开 LibreOffice 就可以看到相应的字体。     fonts.conf is deprecated? &#x21a9;&#xfe0e;
+ LibreOffice 默认用户配置目录 &#x21a9;&#xfe0e;
+   
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
             </div>
             <aside class="col-12 col-md-3 float-left sidebar">

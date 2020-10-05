@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rekii&#39;s blog</title>
-    <link>https://reki-code.github.io/</link>
-    <description>Recent content on rekii&#39;s blog</description>
+    <title>Linux on rekii&#39;s blog</title>
+    <link>https://reki-code.github.io/tags/linux/</link>
+    <description>Recent content in Linux on rekii&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Sep 2020 23:08:51 +0800</lastBuildDate><atom:link href="https://reki-code.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Sep 2020 23:08:51 +0800</lastBuildDate><atom:link href="https://reki-code.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>为 LibreOffice 添加字体</title>
       <link>https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/</link>
