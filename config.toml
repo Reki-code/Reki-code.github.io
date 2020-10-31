@@ -1,0 +1,6 @@
+baseURL = "https://reki-code.github.io/"
+languageCode = "zh-cn"
+hasCJKLanguage = true
+title = "rekii's blog"
+theme = "fuji"
+showToc = true
