@@ -5,15 +5,15 @@
     <link>https://reki-code.github.io/posts/</link>
     <description>Recent content in Posts on rekii&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Sep 2020 23:08:51 +0800</lastBuildDate><atom:link href="https://reki-code.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-hans</language>
+    <lastBuildDate>Thu, 03 Dec 2020 12:42:14 +0800</lastBuildDate><atom:link href="https://reki-code.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>为 LibreOffice 添加字体</title>
+      <title>为libreoffice添加字体</title>
       <link>https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/</link>
-      <pubDate>Tue, 29 Sep 2020 23:08:51 +0800</pubDate>
+      <pubDate>Thu, 03 Dec 2020 12:42:14 +0800</pubDate>
       
       <guid>https://reki-code.github.io/posts/adding-fonts-to-libreoffice-on-user-side/</guid>
-      <description>跳过废话 Linux 安装字体 通常安装字体可以通过自带的包管理系统安装，也可以手动安装。 手动安装字体 在系统范围内（对所有用户有效）安装字体，可以将字体文</description>
+      <description>跳过废话 Linux 安装字体 通常安装字体可以通过自带的包管理系统安装，也可以手动安装。 手动安装字体 在系统范围内（对所有用户有效）安装字体，可以将字体文件移动到 /usr/share/fonts/目录。这些文件需要</description>
     </item>
     
   </channel>
