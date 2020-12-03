@@ -11,7 +11,7 @@ showToc = true
 summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
 paginate = 10
 
-# googleAnalytics = "UA-000000000-0" # Set your Google Analytics UA here
+googleAnalytics = "G-VG14D05P75" # Set your Google Analytics UA here
 
 [outputFormats]
   [outputFormats.SearchIndex]
