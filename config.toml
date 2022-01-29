@@ -1,125 +1,52 @@
-baseURL = "https://reki-code.github.io/"
-languageCode = "zh-hans"
-defaultContentLanguage = "zh-hans"
-hasCJKLanguage = true
-title = "rekii's blog"
-enableEmoji = true
+# Base URL used when generating links to your pages
+# Set to the URL for your site
+baseURL = "https://reki-code.github.io"
+
+# The name of this wonderful theme ;-).
+theme = 'hugo-bearblog'
+
+# Basic metadata configuration for your blog.
+title = "Hugo ʕ•ᴥ•ʔ Rekii's Blog"
+author = "Rekii"
+copyright = "Copyright © 2022, Rekii."
+languageCode = "zh-Hans"
+
+# Generate a nice robots.txt for SEO
 enableRobotsTXT = true
-theme = "fuji"
-showToc = true
 
-summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
-paginate = 10
-
-googleAnalytics = "G-VG14D05P75" # Set your Google Analytics UA here
-
-[outputFormats]
-  [outputFormats.SearchIndex]
-    isPlainText = true
-    notAlternative = true
-    mediaType = "application/json"
-    path = "/search/"
-
-[outputs]
-  home = ["HTML", "RSS", "SearchIndex"]
-
-# [permalinks]
-#  post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
 
 [params]
-  author = "rekii" # You can also set author in post front matter individually
-#  subTitle = "A minimal Hugo theme."
+  # The "description" of your website. This is used in the meta data of your generated html.
+  description = "Hugo + Bear = :heart:"
 
-  # Use CloudFlare Workers to accelerate the Google Analytics
-  # If you are using this please comment the googleAnalytics above
-  # Check https://github.com/SukkaW/cloudflare-workers-async-google-analytics for more details
-  # googleAnalyticsTid = "UA-000000000-0"
-  # googleAnalyticsRoute = "https://*.*.workers.dev/"
+  # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+  # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
+  favicon = "images/favicon.png"
 
-  # Google AdSense
-  # The AdSense code will be inserted between the head tags of your site.
-  # googleAdsense = "0000000000000000"
+  # These "images" are used for the structured data templates. This will show up, when
+  # services like Twitter or Slack want to generate a preview of a link to your site.
+  # See https://gohugo.io/templates/internal#twitter-cards and
+  # https://gohugo.io/templates/internal#open-graph.
+  images = ["images/share.png"]
 
-  # Word counter and read time indicator in post metadata
-  showWordCounter = true
-  showReadTime = false
+  # Another "title" :-). This one is used as the site_name on the Hugo's internal
+  # opengraph structured data template.
+  # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
+  title = "Hugo ʕ•ᴥ•ʔ Bear"
 
-  # License at the end of each post
-  showLicense = true
-  showToc = true
+  # This theme will, by default, inject a made-with-line at the bottom of the page.
+  # You can turn it off, but we would really appreciate if you don’t :-).
+  # hideMadeWithLine = true
 
-  # Open Graph & Twitter Card variables
-  # You can also set description and images in post front matter individually
-  description = "An interesting blog."
-  # images = ["img/og.png"] # This will use the image called og.png in static/img folder
-
-  # Posts shown in homepage
-  mainSections = ["posts"]
-
-  # Bangumi image chart id
-  # bgmImageChart = "000000"
-
-  # License
-  license = "CC BY-NC-SA 4.0"
-  licenseLink = "http://creativecommons.org/licenses/by-nc-sa/4.0/"
-
-  # Comments
-  # utterances, see: https://utteranc.es/
-  # utterancesRepo = "*/*"
-  # utterancesIssueTerm = "pathname"
-
-  # Disqus, see: https://disqus.com/admin/install/platforms/universalcode/
-  # disqusShortname = "*********"
-  # Also use DisqusJS for accessing from Mainland China, see: https://github.com/SukkaW/DisqusJS
-  # If you want to set multiple api key, see theme's README for more details
-  # disqusJSApi = "https://*********/"
-  # disqusJSApikey = "**********"
-
-  # custom lazyload placeholder
-  # 16:9
-  lazyPlaceholder = "/assets/lazyload/dsrca_loading_480x270.svg"
-  # 32:9
-  lazyPlaceholderRow = "/assets/lazyload/dsrca_loading_960x270.svg"
-  # 8:9
-  lazyPlaceholderCol = "/assets/lazyload/dsrca_loading_480x540.svg"
-
-  # Let images display in full brightness under dark mode
-  # disableDarkImage = true
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true  # Enable user to embed HTML snippets in Markdown content
-  [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter
-
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
-
-[taxonomies]
-  tag = "tags"
-
-[menu]
-  [[menu.nav]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.nav]]
-    name = "About"
-    url = "/about/"
-    weight = 3
-  [[menu.nav]]
-    name = "Search"
-    url = "/search/"
-    weight = 4
-  [[menu.nav]]
-    name = "RSS"
-    url = "/index.xml"
-    weight = 5
-
-  [[menu.link]]
-    name = "GitHub"
-    url = "https://github.com/Reki-code"
-    weight = 1
-
+  # By default, this theme displays dates with a format like "02 Jan, 2006", but
+  # you can customize it by setting the `dateFormat` param in your site's config
+  # file. See [Hugo's Format function docs](https://gohugo.io/functions/format/)
+  # for details. An example TOML config that uses [ISO
+  # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+  dateFormat = "2006-01-02"
