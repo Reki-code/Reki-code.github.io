@@ -37,7 +37,7 @@ jobs:
         run: hugo --minify
 
       - name: Create cname file
-        run: echo 'rekii.me' > public/CNAME
+        run: echo 'www.rekii.me' > public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
